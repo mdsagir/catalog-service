@@ -3,11 +3,13 @@ package com.example.controller;
 import com.example.model.Book;
 import com.example.service.BookService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@Slf4j
 @RestController
 @RequestMapping("books")
 @RequiredArgsConstructor
@@ -17,6 +19,7 @@ public class BookController {
 
     @GetMapping
     public Iterable<Book> books() {
+        log.info("getting all the book");
         return this.bookService.findAll();
     }
 
