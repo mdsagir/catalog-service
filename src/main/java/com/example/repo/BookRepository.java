@@ -1,18 +1,17 @@
 package com.example.repo;
 
-import com.example.model.Book;
+import com.example.entity.BookEntity;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.Collection;
+import javax.transaction.Transactional;
 import java.util.Optional;
 
-public interface BookRepository {
-    Collection<Book> findAll();
+public interface BookRepository extends CrudRepository<BookEntity, Long> {
 
-    Optional<Book> findByIsbn(String isbn);
+    Optional<BookEntity> findByIsbn(String isbn);
 
     boolean existsByIsbn(String isbn);
 
-    Book save(Book book);
-
+    @Transactional
     void deleteByIsbn(String isbn);
 }

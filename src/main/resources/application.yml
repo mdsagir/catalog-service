@@ -22,6 +22,14 @@ spring:
         initial-interval: 1000 # 1s
         max-interval: 2000 # 2s
         multiplier: 1.1
-  profiles.active: prod
-
+  profiles:
+    active:
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/springnative
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 management.endpoints.web.exposure.include: refresh

@@ -3,10 +3,11 @@ package com.example.service;
 import com.example.model.Book;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 public interface BookService {
-    Collection<Book> findAll();
+    List<Book> findAll();
 
     Book findByIsbn(String isbn);
 

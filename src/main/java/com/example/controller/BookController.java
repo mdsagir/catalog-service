@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -18,7 +19,7 @@ public class BookController {
     private final BookService bookService;
 
     @GetMapping
-    public Iterable<Book> books() {
+    public List<Book> books() {
         log.info("getting all the book");
         return this.bookService.findAll();
     }
