@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  tomcat:
+    connection-timeout: 5s
+    threads:
+      max: 100
+      min-spare: 10
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  application:
+    name: catalog-service
+  config.import: "optional:configserver:http://localhost:8888"
+  cloud:
+    config:
+      request-connect-timeout: 1000 # 1s
+      request-read-timeout: 5000 # 5s
+      fail-fast: false
+      retry:
+        max-attempts: 6
+        initial-interval: 1000 # 1s
+        max-interval: 2000 # 2s
+        multiplier: 1.1
+  profiles.active: prod
+
+management.endpoints.web.exposure.include: refresh
