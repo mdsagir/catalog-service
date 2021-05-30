@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-app
+  labels:
+    app: catalog-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: catalog-app
+  template:
+    metadata:
+      labels:
+        app: catalog-app
+    spec:
+      terminationGracePeriodSeconds: 20
+      containers:
+        - name: catalog-app
+          image: sagiransari/catalog-service:0.0.1-SNAPSHOT
+          lifecycle:
+            preStop:
+              exec:
+                command: [ "sh", "-c", "sleep 5" ]
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              memory: "756Mi"
+              cpu: "0.5"
+            limits:
+              memory: "756Mi"

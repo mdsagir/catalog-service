@@ -8,9 +8,12 @@ server:
   error:
     include-message: always
     include-binding-errors: always
+  shutdown: graceful
 spring:
   application:
     name: catalog-service
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
   config.import: "optional:configserver:http://localhost:8888"
   cloud:
     config:
@@ -26,8 +29,9 @@ spring:
     active:
   datasource:
     username: root
-    password: password
-    url: jdbc:mysql://host.docker.internal:3306/springnative
+    password: NdMlPpz4muoC4Gp4
+    #url: jdbc:mysql://host.docker.internal:3306/springnative
+    url: jdbc:mysql://34.122.53.158:3306/springnative
   jpa:
     hibernate:
       ddl-auto: update
