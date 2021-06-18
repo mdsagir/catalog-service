@@ -37,6 +37,8 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.2'
+
 }
 
 dependencyManagement {

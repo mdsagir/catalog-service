@@ -7,6 +7,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
@@ -19,10 +20,10 @@ public class BaseEntity {
     private Long id;
 
     @CreatedDate
-    private Long createdDate;
+    private LocalDateTime createdDate;
 
     @LastModifiedDate
-    private Long lastModifiedDate;
+    private LocalDateTime modifiedDate;
 
     @Version
     private int version;

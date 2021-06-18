@@ -12,7 +12,7 @@ public class Book {
 
 
     @NotBlank(message = "The book ISBN must be defined.")
-    @Pattern(regexp = "^(97([89]))?\\d{9}(\\d|X)$", message = "The ISBN format must follow the standards ISBN-10 or ISBN-13.")
+    //@Pattern(regexp = "^(97([89]))?\\d{9}(\\d|X)$", message = "The ISBN format must follow the standards ISBN-10 or ISBN-13.")
     private String isbn;
 
     @NotBlank(message = "The book title must be defined.")
@@ -21,8 +21,7 @@ public class Book {
     @NotBlank(message = "The book author must be defined.")
     private String author;
 
-    @PastOrPresent(message = "The book cannot have been published in the future.")
-    private Year publishingYear;
+    private Integer publishingYear;
 
     @NotNull(message = "The book price must be defined.")
     @Positive(message = "The book price must be greater than zero.")

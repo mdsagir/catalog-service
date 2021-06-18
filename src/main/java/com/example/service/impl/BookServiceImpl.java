@@ -27,7 +27,7 @@ public class BookServiceImpl implements BookService {
         Iterable<BookEntity> bookEntities = bookRepository.findAll();
         Stream<BookEntity> bookEntityStream = StreamSupport.stream(bookEntities.spliterator(), false);
         return bookEntityStream.map(bookEntity ->
-                new Book(bookEntity.getIsbn(), bookEntity.getTitle(), bookEntity.getAuthor(), Year.of(bookEntity.getPublishingYear()), bookEntity.getPrice()))
+                new Book(bookEntity.getIsbn(), bookEntity.getTitle(), bookEntity.getAuthor(), bookEntity.getPublishingYear(), bookEntity.getPrice()))
                 .collect(Collectors.toList());
     }
 
@@ -36,7 +36,7 @@ public class BookServiceImpl implements BookService {
     public Book findByIsbn(String isbn) {
         return bookRepository.findByIsbn(isbn)
                 .map(bookEntity ->
-                        new Book(bookEntity.getIsbn(), bookEntity.getTitle(), bookEntity.getAuthor(), Year.of(bookEntity.getPublishingYear()), bookEntity.getPrice()))
+                        new Book(bookEntity.getIsbn(), bookEntity.getTitle(), bookEntity.getAuthor(), bookEntity.getPublishingYear(), bookEntity.getPrice()))
                 .orElseThrow(() -> new BookNotFoundException(isbn));
     }
 
@@ -49,7 +49,7 @@ public class BookServiceImpl implements BookService {
         bookEntity.setIsbn(book.getIsbn());
         bookEntity.setTitle(book.getTitle());
         bookEntity.setAuthor(book.getAuthor());
-        bookEntity.setPublishingYear(book.getPublishingYear().getValue());
+        bookEntity.setPublishingYear(book.getPublishingYear());
         bookEntity.setPrice(book.getPrice());
         bookRepository.save(bookEntity);
         return book;
@@ -73,7 +73,7 @@ public class BookServiceImpl implements BookService {
         BookEntity bookToUpdate = existingBook.get();
         bookToUpdate.setTitle(book.getTitle());
         bookToUpdate.setAuthor(book.getAuthor());
-        bookToUpdate.setPublishingYear(book.getPublishingYear().getValue());
+        bookToUpdate.setPublishingYear(book.getPublishingYear());
         bookToUpdate.setPrice(book.getPrice());
         bookRepository.save(bookToUpdate);
         return book;

@@ -28,12 +28,23 @@ spring:
   profiles:
     active:
   datasource:
-    username: root
-    password: NdMlPpz4muoC4Gp4
+    username: sagir
+    password: password
     #url: jdbc:mysql://host.docker.internal:3306/springnative
-    url: jdbc:mysql://34.122.53.158:3306/springnative
+    url: jdbc:mysql://localhost:3306/springnative
+    hikari:
+      max-lifetime: 60000
+      auto-commit: false
+      idle-timeout: 3000
+      minimum-idle: 5
+      leak-detection-threshold: 240000
+      maximum-pool-size: 100
+      connection-timeout: 30000
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
 management.endpoints.web.exposure.include: refresh
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
