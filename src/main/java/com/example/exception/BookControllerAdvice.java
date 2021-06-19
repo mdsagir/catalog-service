@@ -1,7 +1,5 @@
-package com.example.controller.advice;
+package com.example.exception;
 
-import com.example.exception.BookAlreadyExistsException;
-import com.example.exception.BookNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;

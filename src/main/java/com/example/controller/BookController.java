@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.config.BookProperties;
 import com.example.model.Book;
 import com.example.service.BookService;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.List;
 public class BookController {
 
     private final BookService bookService;
+    private final BookProperties properties;
 
     @GetMapping
     public List<Book> books() {
@@ -44,6 +46,11 @@ public class BookController {
     @PutMapping("{isbn}")
     public Book update(@PathVariable String isbn, @Valid @RequestBody Book book) {
         return this.bookService.editBook(isbn, book);
+    }
+
+    @GetMapping("properties")
+    public String getProperties() {
+        return this.properties.getGreeting();
     }
 
 }

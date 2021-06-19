@@ -31,7 +31,7 @@ spring:
     username: sagir
     password: password
     #url: jdbc:mysql://host.docker.internal:3306/springnative
-    url: jdbc:mysql://localhost:3306/springnative
+    url: jdbc:mysql://35.192.18.170:3306/springnative
     hikari:
       max-lifetime: 60000
       auto-commit: false
