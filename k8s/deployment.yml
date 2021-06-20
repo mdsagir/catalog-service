@@ -18,6 +18,9 @@ spec:
       containers:
         - name: catalog-app
           image: sagiransari/catalog-service:0.0.1-SNAPSHOT
+          env:
+            - name: CONFIG_SERVICE_URI
+              value: http://config-service
           lifecycle:
             preStop:
               exec:
