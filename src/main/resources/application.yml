@@ -14,8 +14,7 @@ spring:
     name: catalog-service
   lifecycle:
     timeout-per-shutdown-phase: 15s
-#  config.import: "optional:configserver:http://localhost:8888"
-  config.import: "optional:configserver:${CONFIG_SERVICE_URI:http://localhost:8888}"
+  config.import: "optional:configserver:http://localhost:8888"
   cloud:
     config:
       request-connect-timeout: 5000 # 1s
@@ -31,8 +30,7 @@ spring:
   datasource:
     username: sagir
     password: password
-    #url: jdbc:mysql://host.docker.internal:3306/springnative
-    url: jdbc:mysql://35.192.18.170:3306/springnative
+    url: jdbc:mysql://helllo:3306/springnative
     hikari:
       max-lifetime: 60000
       auto-commit: false

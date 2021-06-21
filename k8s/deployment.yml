@@ -19,8 +19,8 @@ spec:
         - name: catalog-app
           image: sagiransari/catalog-service:0.0.1-SNAPSHOT
           env:
-            - name: CONFIG_SERVICE_URI
-              value: http://config-service
+            - name: SPRING_CONFIG_IMPORT
+              value: optional:configserver:http://config-service:8888
           lifecycle:
             preStop:
               exec:
