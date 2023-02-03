@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.polarbookshop.catalogservice.web.BookJsonTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-03T05:22:17" hostname="Sagirs-Mac-mini.local" time="0.011">
+  <properties/>
+  <testcase name="test_serialized()" classname="com.polarbookshop.catalogservice.web.BookJsonTest" time="0.011"/>
+  <system-out><![CDATA[2023-02-03T10:52:17.800+05:30  INFO 16209 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.polarbookshop.catalogservice.web.BookJsonTest]: BookJsonTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-03T10:52:17.801+05:30  INFO 16209 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.polarbookshop.catalogservice.CatalogServiceApplication for test class com.polarbookshop.catalogservice.web.BookJsonTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.2)
+
+2023-02-03T10:52:17.817+05:30  INFO 16209 --- [    Test worker] c.p.catalogservice.web.BookJsonTest      : Starting BookJsonTest using Java 17.0.2 with PID 16209 (started by sagiransari in /Users/sagiransari/Documents/cloud-native/catalog-service)
+2023-02-03T10:52:17.817+05:30  INFO 16209 --- [    Test worker] c.p.catalogservice.web.BookJsonTest      : No active profile set, falling back to 1 default profile: "default"
+2023-02-03T10:52:17.818+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-02-03T10:52:17.818+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
+2023-02-03T10:52:17.818+05:30  WARN 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@c5dc3db uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/catalog-service/default": Connection refused
+2023-02-03T10:52:17.842+05:30  INFO 16209 --- [    Test worker] c.p.catalogservice.web.BookJsonTest      : Started BookJsonTest in 0.04 seconds (process running for 5.165)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

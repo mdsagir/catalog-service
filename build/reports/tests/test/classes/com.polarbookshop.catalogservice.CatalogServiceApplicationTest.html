@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CatalogServiceApplicationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CatalogServiceApplicationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.polarbookshop.catalogservice.html">com.polarbookshop.catalogservice</a> &gt; CatalogServiceApplicationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.557s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">when_delete_request_then_book_deleted()</td>
+<td class="success">0.506s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">when_get_request_with_id_then_book_returned()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">when_post_request_to_sent_to_create_new_book()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">when_put_request_then_book_updated()</td>
+<td class="success">0.026s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>10:52:13.050 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [CatalogServiceApplicationTest]: using SpringBootContextLoader
+10:52:13.053 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.polarbookshop.catalogservice.CatalogServiceApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:52:13.053 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.polarbookshop.catalogservice.CatalogServiceApplicationTest]: CatalogServiceApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:52:13.062 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [CatalogServiceApplicationTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, WebTestClientContextCustomizer]
+10:52:13.092 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/sagiransari/Documents/cloud-native/catalog-service/build/classes/java/main/com/polarbookshop/catalogservice/CatalogServiceApplication.class]
+10:52:13.096 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.polarbookshop.catalogservice.CatalogServiceApplication for test class com.polarbookshop.catalogservice.CatalogServiceApplicationTest
+10:52:13.131 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [CatalogServiceApplicationTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+10:52:13.132 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [CatalogServiceApplicationTest], class annotated with @DirtiesContext [false] with mode [null]
+10:52:13.136 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.polarbookshop.catalogservice.CatalogServiceApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.2)
+
+2023-02-03T10:52:13.421+05:30  INFO 16209 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : Starting CatalogServiceApplicationTest using Java 17.0.2 with PID 16209 (started by sagiransari in /Users/sagiransari/Documents/cloud-native/catalog-service)
+2023-02-03T10:52:13.422+05:30  INFO 16209 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : The following 1 profile is active: &quot;integration&quot;
+2023-02-03T10:52:13.430+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-02-03T10:52:13.430+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
+2023-02-03T10:52:13.430+05:30  WARN 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@53830483 uris = array&lt;String&gt;['http://localhost:8888'], optional = true, profiles = list['integration']]): I/O error on GET request for &quot;http://localhost:8888/catalog-service/integration&quot;: Connection refused
+2023-02-03T10:52:13.746+05:30  INFO 16209 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-03T10:52:13.805+05:30  INFO 16209 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JDBC repository interfaces.
+2023-02-03T10:52:13.875+05:30  INFO 16209 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5b38f22b-add8-3f64-8dc8-8783e88f0ea1
+2023-02-03T10:52:14.030+05:30  INFO 16209 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-02-03T10:52:14.034+05:30  INFO 16209 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-03T10:52:14.035+05:30  INFO 16209 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-03T10:52:14.081+05:30  INFO 16209 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-03T10:52:14.082+05:30  INFO 16209 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 650 ms
+2023-02-03T10:52:14.166+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-03T10:52:14.186+05:30  INFO 16209 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-02-03T10:52:14.195+05:30  INFO 16209 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-02-03T10:52:14.401+05:30  INFO 16209 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2023-02-03T10:52:14.402+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2023-02-03T10:52:14.416+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 20.10.22
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 7851 MB
+2023-02-03T10:52:14.432+05:30  INFO 16209 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Creating container for image: testcontainers/ryuk:0.3.4
+2023-02-03T10:52:14.692+05:30  INFO 16209 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Container testcontainers/ryuk:0.3.4 is starting: 5dfc99e0f1d19444b83e9fb70043496036d7dc877acc1b6c1597b4184e82df1d
+2023-02-03T10:52:15.056+05:30  INFO 16209 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Container testcontainers/ryuk:0.3.4 started in PT0.636148S
+2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] docker[postgres:14.4]                    : Creating container for image: postgres:14.4
+2023-02-03T10:52:15.097+05:30  INFO 16209 --- [    Test worker] docker[postgres:14.4]                    : Container postgres:14.4 is starting: ee3da7b90fd5bea6b45345805d36629759614370882b1e8052cb23c83b59622a
+2023-02-03T10:52:16.232+05:30  INFO 16209 --- [    Test worker] docker[postgres:14.4]                    : Container postgres:14.4 started in PT1.171559S
+2023-02-03T10:52:16.325+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@1aee6983
+2023-02-03T10:52:16.326+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-03T10:52:16.643+05:30  INFO 16209 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-03T10:52:16.752+05:30  INFO 16209 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50581 (http) with context path ''
+2023-02-03T10:52:16.768+05:30  INFO 16209 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : Started CatalogServiceApplicationTest in 3.622 seconds (process running for 4.091)
+2023-02-03T10:52:17.060+05:30 ERROR 16209 --- [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2023-02-03T10:52:17.165+05:30  INFO 16209 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-03T10:52:17.165+05:30  INFO 16209 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-03T10:52:17.166+05:30  INFO 16209 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 03-Feb-2023, 10:52:20 am</p>
+</div>
+</div>
+</body>
+</html>

@@ -5,38 +5,48 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
 
-    private final BookRepository bookRepository;
+    private final JpaBookRepository jpaBookRepository;
 
-    public BookService(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+    public BookService(JpaBookRepository jpaBookRepository) {
+        this.jpaBookRepository = jpaBookRepository;
     }
 
+
     public Iterable<Book> viewBookList() {
-        return bookRepository.findAll();
+        return jpaBookRepository.findAll();
     }
 
     public Book viewBookDetails(String isbn) {
-        return bookRepository.findByIsbn(isbn)
+        return jpaBookRepository.findByIsbn(isbn)
                 .orElseThrow(() -> new BookNotFoundException(isbn));
     }
 
     public Book addBookToCatalog(Book book) {
         String isbn = book.isbn();
-        if (bookRepository.existsByIsbn(isbn)) {
+        var b = jpaBookRepository.existsByIsbn(isbn);
+        if (b) {
             throw new BookAlreadyExistsException(isbn);
         }
-        return bookRepository.save(book);
+        return jpaBookRepository.save(book);
     }
 
     public void removeBookFromCatalog(String isbn) {
-        bookRepository.deleteByIsbn(isbn);
+        jpaBookRepository.deleteByIsbn(isbn);
     }
 
     public Book editBookDetails(String isbn, Book book) {
-        return bookRepository.findByIsbn(isbn)
+        return jpaBookRepository.findByIsbn(isbn)
                 .map(existingBook -> {
-                    var bookToUpdate = new Book(existingBook.isbn(), book.title(), book.author(), book.price());
-                    return bookRepository.save(bookToUpdate);
+                    var bookToUpdate = new Book(
+                            existingBook.id(),
+                            existingBook.isbn(),
+                            book.title(),
+                            book.author(),
+                            book.price(),
+                            existingBook.createdDate(),
+                            existingBook.lastModifiedDate(),
+                            existingBook.version());
+                    return jpaBookRepository.save(bookToUpdate);
                 })
                 .orElseGet(() -> addBookToCatalog(book));
     }
