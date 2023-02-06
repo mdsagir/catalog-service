@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.048s</div>
+<div class="counter">0.046s</div>
 <p>duration</p>
 </div>
 </td>
@@ -84,7 +84,7 @@
 </tr>
 <tr>
 <td class="success">exists_by_isbn_when_existing()</td>
-<td class="success">0.009s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@
 </tr>
 <tr>
 <td class="success">findAllBooks()</td>
-<td class="success">0.012s</td>
+<td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -104,7 +104,7 @@
 </tr>
 <tr>
 <td class="success">find_book_by_isbn_when_not_existing()</td>
-<td class="success">0.010s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -112,8 +112,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-02-03T10:52:17.412+05:30  INFO 16209 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.polarbookshop.catalogservice.domain.BookRepositoryJdbcTests]: BookRepositoryJdbcTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-02-03T10:52:17.418+05:30  INFO 16209 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.polarbookshop.catalogservice.CatalogServiceApplication for test class com.polarbookshop.catalogservice.domain.BookRepositoryJdbcTests
+<pre>2023-02-06T22:28:58.391+05:30  INFO 53684 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.polarbookshop.catalogservice.domain.BookRepositoryJdbcTests]: BookRepositoryJdbcTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-06T22:28:58.398+05:30  INFO 53684 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.polarbookshop.catalogservice.CatalogServiceApplication for test class com.polarbookshop.catalogservice.domain.BookRepositoryJdbcTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -123,17 +123,21 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.2)
 
-2023-02-03T10:52:17.439+05:30  INFO 16209 --- [    Test worker] c.p.c.domain.BookRepositoryJdbcTests     : Starting BookRepositoryJdbcTests using Java 17.0.2 with PID 16209 (started by sagiransari in /Users/sagiransari/Documents/cloud-native/catalog-service)
-2023-02-03T10:52:17.439+05:30  INFO 16209 --- [    Test worker] c.p.c.domain.BookRepositoryJdbcTests     : The following 1 profile is active: &quot;integration&quot;
-2023-02-03T10:52:17.440+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2023-02-03T10:52:17.440+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
-2023-02-03T10:52:17.440+05:30  WARN 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3f3e6c03 uris = array&lt;String&gt;['http://localhost:8888'], optional = true, profiles = list['integration']]): I/O error on GET request for &quot;http://localhost:8888/catalog-service/integration&quot;: Connection refused
-2023-02-03T10:52:17.473+05:30  INFO 16209 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2023-02-03T10:52:17.477+05:30  INFO 16209 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interfaces.
-2023-02-03T10:52:17.489+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-02-03T10:52:17.524+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@6f8c6694
-2023-02-03T10:52:17.524+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-02-03T10:52:17.545+05:30  INFO 16209 --- [    Test worker] c.p.c.domain.BookRepositoryJdbcTests     : Started BookRepositoryJdbcTests in 0.125 seconds (process running for 4.868)
+2023-02-06T22:28:58.421+05:30  INFO 53684 --- [    Test worker] c.p.c.domain.BookRepositoryJdbcTests     : Starting BookRepositoryJdbcTests using Java 17.0.2 with PID 53684 (started by sagiransari in /Users/sagiransari/Documents/cloud-native/catalog-service)
+2023-02-06T22:28:58.421+05:30  INFO 53684 --- [    Test worker] c.p.c.domain.BookRepositoryJdbcTests     : The following 1 profile is active: &quot;integration&quot;
+2023-02-06T22:28:58.422+05:30  INFO 53684 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-02-06T22:28:58.422+05:30  INFO 53684 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
+2023-02-06T22:28:58.422+05:30  WARN 53684 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@19d85bbe uris = array&lt;String&gt;['http://localhost:8888'], optional = true, profiles = list['integration']]): I/O error on GET request for &quot;http://localhost:8888/catalog-service/integration&quot;: Connection refused
+2023-02-06T22:28:58.451+05:30  INFO 53684 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-06T22:28:58.454+05:30  INFO 53684 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interfaces.
+2023-02-06T22:28:58.477+05:30  INFO 53684 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-02-06T22:28:58.500+05:30  INFO 53684 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@22e8f04c
+2023-02-06T22:28:58.500+05:30  INFO 53684 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-02-06T22:28:58.502+05:30  INFO 53684 --- [    Test worker] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:56013/test (PostgreSQL 14.4)
+2023-02-06T22:28:58.514+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.005s)
+2023-02-06T22:28:58.541+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: 2
+2023-02-06T22:28:58.541+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;public&quot; is up to date. No migration necessary.
+2023-02-06T22:28:58.563+05:30  INFO 53684 --- [    Test worker] c.p.c.domain.BookRepositoryJdbcTests     : Started BookRepositoryJdbcTests in 0.163 seconds (process running for 5.337)
 </pre>
 </span>
 </div>
@@ -145,7 +149,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at 03-Feb-2023, 10:52:20 am</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at 06-Feb-2023, 10:29:01 pm</p>
 </div>
 </div>
 </body>

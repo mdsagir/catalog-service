@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.polarbookshop.catalogservice.domain.BookServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-03T05:22:17" hostname="Sagirs-Mac-mini.local" time="0.06">
+<testsuite name="com.polarbookshop.catalogservice.domain.BookServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-06T16:58:58" hostname="Sagirs-Mac-mini.local" time="0.058">
   <properties/>
-  <testcase name="when_book_to_read_does_not_exist_then_throws()" classname="com.polarbookshop.catalogservice.domain.BookServiceTest" time="0.059"/>
-  <testcase name="whenBookToCreateAlreadyExistsThenThrows()" classname="com.polarbookshop.catalogservice.domain.BookServiceTest" time="0.001"/>
+  <testcase name="when_book_to_read_does_not_exist_then_throws()" classname="com.polarbookshop.catalogservice.domain.BookServiceTest" time="0.057"/>
+  <testcase name="whenBookToCreateAlreadyExistsThenThrows()" classname="com.polarbookshop.catalogservice.domain.BookServiceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

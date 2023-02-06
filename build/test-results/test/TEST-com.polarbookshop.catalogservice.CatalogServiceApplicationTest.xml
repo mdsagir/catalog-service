@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-02-03T05:22:16" hostname="Sagirs-Mac-mini.local" time="0.56">
+<testsuite name="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-02-06T16:58:57" hostname="Sagirs-Mac-mini.local" time="0.573">
   <properties/>
-  <testcase name="when_delete_request_then_book_deleted()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.506"/>
-  <testcase name="when_post_request_to_sent_to_create_new_book()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.011"/>
-  <testcase name="when_put_request_then_book_updated()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.026"/>
-  <testcase name="when_get_request_with_id_then_book_returned()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.014"/>
-  <system-out><![CDATA[10:52:13.050 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [CatalogServiceApplicationTest]: using SpringBootContextLoader
-10:52:13.053 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.polarbookshop.catalogservice.CatalogServiceApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-10:52:13.053 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.polarbookshop.catalogservice.CatalogServiceApplicationTest]: CatalogServiceApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:52:13.062 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [CatalogServiceApplicationTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, WebTestClientContextCustomizer]
-10:52:13.092 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/sagiransari/Documents/cloud-native/catalog-service/build/classes/java/main/com/polarbookshop/catalogservice/CatalogServiceApplication.class]
-10:52:13.096 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.polarbookshop.catalogservice.CatalogServiceApplication for test class com.polarbookshop.catalogservice.CatalogServiceApplicationTest
-10:52:13.131 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [CatalogServiceApplicationTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-10:52:13.132 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [CatalogServiceApplicationTest], class annotated with @DirtiesContext [false] with mode [null]
-10:52:13.136 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.polarbookshop.catalogservice.CatalogServiceApplicationTest
+  <testcase name="when_delete_request_then_book_deleted()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.514"/>
+  <testcase name="when_post_request_to_sent_to_create_new_book()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.014"/>
+  <testcase name="when_put_request_then_book_updated()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.028"/>
+  <testcase name="when_get_request_with_id_then_book_returned()" classname="com.polarbookshop.catalogservice.CatalogServiceApplicationTest" time="0.015"/>
+  <system-out><![CDATA[22:28:53.640 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [CatalogServiceApplicationTest]: using SpringBootContextLoader
+22:28:53.643 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.polarbookshop.catalogservice.CatalogServiceApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:28:53.644 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.polarbookshop.catalogservice.CatalogServiceApplicationTest]: CatalogServiceApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:28:53.653 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [CatalogServiceApplicationTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, WebTestClientContextCustomizer]
+22:28:53.684 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/sagiransari/Documents/cloud-native/catalog-service/build/classes/java/main/com/polarbookshop/catalogservice/CatalogServiceApplication.class]
+22:28:53.687 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.polarbookshop.catalogservice.CatalogServiceApplication for test class com.polarbookshop.catalogservice.CatalogServiceApplicationTest
+22:28:53.724 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [CatalogServiceApplicationTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+22:28:53.724 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [CatalogServiceApplicationTest], class annotated with @DirtiesContext [false] with mode [null]
+22:28:53.729 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.polarbookshop.catalogservice.CatalogServiceApplicationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -23,47 +23,57 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.2)
 
-2023-02-03T10:52:13.421+05:30  INFO 16209 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : Starting CatalogServiceApplicationTest using Java 17.0.2 with PID 16209 (started by sagiransari in /Users/sagiransari/Documents/cloud-native/catalog-service)
-2023-02-03T10:52:13.422+05:30  INFO 16209 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : The following 1 profile is active: "integration"
-2023-02-03T10:52:13.430+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2023-02-03T10:52:13.430+05:30  INFO 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
-2023-02-03T10:52:13.430+05:30  WARN 16209 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@53830483 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['integration']]): I/O error on GET request for "http://localhost:8888/catalog-service/integration": Connection refused
-2023-02-03T10:52:13.746+05:30  INFO 16209 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2023-02-03T10:52:13.805+05:30  INFO 16209 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JDBC repository interfaces.
-2023-02-03T10:52:13.875+05:30  INFO 16209 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5b38f22b-add8-3f64-8dc8-8783e88f0ea1
-2023-02-03T10:52:14.030+05:30  INFO 16209 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-02-03T10:52:14.034+05:30  INFO 16209 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-02-03T10:52:14.035+05:30  INFO 16209 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-02-03T10:52:14.081+05:30  INFO 16209 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-02-03T10:52:14.082+05:30  INFO 16209 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 650 ms
-2023-02-03T10:52:14.166+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-02-03T10:52:14.186+05:30  INFO 16209 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-2023-02-03T10:52:14.195+05:30  INFO 16209 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-2023-02-03T10:52:14.401+05:30  INFO 16209 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
-2023-02-03T10:52:14.402+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
-2023-02-03T10:52:14.416+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+2023-02-06T22:28:54.027+05:30  INFO 53684 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : Starting CatalogServiceApplicationTest using Java 17.0.2 with PID 53684 (started by sagiransari in /Users/sagiransari/Documents/cloud-native/catalog-service)
+2023-02-06T22:28:54.028+05:30  INFO 53684 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : The following 1 profile is active: "integration"
+2023-02-06T22:28:54.035+05:30  INFO 53684 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2023-02-06T22:28:54.035+05:30  INFO 53684 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
+2023-02-06T22:28:54.035+05:30  WARN 53684 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@44924587 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['integration']]): I/O error on GET request for "http://localhost:8888/catalog-service/integration": Connection refused
+2023-02-06T22:28:54.406+05:30  INFO 53684 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-02-06T22:28:54.465+05:30  INFO 53684 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JDBC repository interfaces.
+2023-02-06T22:28:54.539+05:30  INFO 53684 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2fb2a380-1d78-324d-8514-4b9c254b32ee
+2023-02-06T22:28:54.696+05:30  INFO 53684 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-02-06T22:28:54.700+05:30  INFO 53684 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-06T22:28:54.700+05:30  INFO 53684 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-06T22:28:54.745+05:30  INFO 53684 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-06T22:28:54.746+05:30  INFO 53684 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 709 ms
+2023-02-06T22:28:54.849+05:30  INFO 53684 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-02-06T22:28:54.849+05:30  INFO 53684 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-02-06T22:28:54.849+05:30  INFO 53684 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
+2023-02-06T22:28:54.853+05:30  INFO 53684 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-06T22:28:54.877+05:30  INFO 53684 --- [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-02-06T22:28:54.888+05:30  INFO 53684 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-02-06T22:28:55.117+05:30  INFO 53684 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2023-02-06T22:28:55.118+05:30  INFO 53684 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2023-02-06T22:28:55.138+05:30  INFO 53684 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
   Server Version: 20.10.22
   API Version: 1.41
   Operating System: Docker Desktop
   Total Memory: 7851 MB
-2023-02-03T10:52:14.432+05:30  INFO 16209 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Creating container for image: testcontainers/ryuk:0.3.4
-2023-02-03T10:52:14.692+05:30  INFO 16209 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Container testcontainers/ryuk:0.3.4 is starting: 5dfc99e0f1d19444b83e9fb70043496036d7dc877acc1b6c1597b4184e82df1d
-2023-02-03T10:52:15.056+05:30  INFO 16209 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Container testcontainers/ryuk:0.3.4 started in PT0.636148S
-2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
-2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
-2023-02-03T10:52:15.060+05:30  INFO 16209 --- [    Test worker] docker[postgres:14.4]                    : Creating container for image: postgres:14.4
-2023-02-03T10:52:15.097+05:30  INFO 16209 --- [    Test worker] docker[postgres:14.4]                    : Container postgres:14.4 is starting: ee3da7b90fd5bea6b45345805d36629759614370882b1e8052cb23c83b59622a
-2023-02-03T10:52:16.232+05:30  INFO 16209 --- [    Test worker] docker[postgres:14.4]                    : Container postgres:14.4 started in PT1.171559S
-2023-02-03T10:52:16.325+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@1aee6983
-2023-02-03T10:52:16.326+05:30  INFO 16209 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-02-03T10:52:16.643+05:30  INFO 16209 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-02-03T10:52:16.752+05:30  INFO 16209 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50581 (http) with context path ''
-2023-02-03T10:52:16.768+05:30  INFO 16209 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : Started CatalogServiceApplicationTest in 3.622 seconds (process running for 4.091)
-2023-02-03T10:52:17.060+05:30 ERROR 16209 --- [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2023-02-03T10:52:17.165+05:30  INFO 16209 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-02-03T10:52:17.165+05:30  INFO 16209 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-02-03T10:52:17.166+05:30  INFO 16209 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-06T22:28:55.158+05:30  INFO 53684 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Creating container for image: testcontainers/ryuk:0.3.4
+2023-02-06T22:28:55.431+05:30  INFO 53684 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Container testcontainers/ryuk:0.3.4 is starting: fc91d9b25dabd0b11945c12095a25f3055d3b4f5212ceb5f460de7c642225d78
+2023-02-06T22:28:55.846+05:30  INFO 53684 --- [    Test worker] docker[testcontainers/ryuk:0.3.4]        : Container testcontainers/ryuk:0.3.4 started in PT0.704046S
+2023-02-06T22:28:55.851+05:30  INFO 53684 --- [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-02-06T22:28:55.851+05:30  INFO 53684 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2023-02-06T22:28:55.851+05:30  INFO 53684 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2023-02-06T22:28:55.851+05:30  INFO 53684 --- [    Test worker] docker[postgres:14.4]                    : Creating container for image: postgres:14.4
+2023-02-06T22:28:55.874+05:30  INFO 53684 --- [    Test worker] docker[postgres:14.4]                    : Container postgres:14.4 is starting: a57411046e32e2bee33ab29e11f00ce93dd61ce3b2172d581cd918d904aaef56
+2023-02-06T22:28:57.080+05:30  INFO 53684 --- [    Test worker] docker[postgres:14.4]                    : Container postgres:14.4 started in PT1.228725S
+2023-02-06T22:28:57.161+05:30  INFO 53684 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@74bcf1ab
+2023-02-06T22:28:57.162+05:30  INFO 53684 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-06T22:28:57.171+05:30  INFO 53684 --- [    Test worker] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:56013/test (PostgreSQL 14.4)
+2023-02-06T22:28:57.195+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.010s)
+2023-02-06T22:28:57.208+05:30  INFO 53684 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-02-06T22:28:57.251+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-02-06T22:28:57.255+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Initial schema"
+2023-02-06T22:28:57.275+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add publisher column"
+2023-02-06T22:28:57.284+05:30  INFO 53684 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.037s)
+2023-02-06T22:28:57.611+05:30  INFO 53684 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-02-06T22:28:57.716+05:30  INFO 53684 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56020 (http) with context path ''
+2023-02-06T22:28:57.727+05:30  INFO 53684 --- [    Test worker] c.p.c.CatalogServiceApplicationTest      : Started CatalogServiceApplicationTest in 3.988 seconds (process running for 4.501)
+2023-02-06T22:28:58.034+05:30 ERROR 53684 --- [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2023-02-06T22:28:58.141+05:30  INFO 53684 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06T22:28:58.141+05:30  INFO 53684 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-06T22:28:58.142+05:30  INFO 53684 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -31,7 +31,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     runtimeOnly 'org.postgresql:postgresql'
-//    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-core'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
     testImplementation 'org.testcontainers:postgresql'
@@ -48,6 +48,21 @@ dependencyManagement {
 bootRun {
     systemProperty 'spring.profiles.active', 'testdata'
 }
+
+bootBuildImage {
+    builder = "ghcr.io/thomasvitale/java-builder-arm64"
+    imageName = "${project.name}"
+    environment = ["BP_JVM_VERSION": "17.*"]
+
+    docker {
+        publishRegistry {
+            username = project.findProperty("registryUsername")
+            password = project.findProperty("registryToken")
+            url = project.findProperty("registryUrl")
+        }
+    }
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }

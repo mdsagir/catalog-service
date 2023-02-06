@@ -19,7 +19,7 @@ class CatalogServiceApplicationTest {
 
     @Test
     void when_post_request_to_sent_to_create_new_book() {
-        var expectedBook = Book.of("1234567890", "Title", "Author", 9.9);
+        var expectedBook = Book.of("1234567890", "Title", "Author", 9.9, "Publisher");
         webTestClient
                 .post()
                 .uri("/books")
@@ -36,7 +36,7 @@ class CatalogServiceApplicationTest {
     @Test
     void when_get_request_with_id_then_book_returned() {
         var bookIsbn = "1231231230";
-        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
+        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90, "Publisher");
         Book expectedBook = webTestClient
                 .post()
                 .uri("/books")
@@ -61,7 +61,7 @@ class CatalogServiceApplicationTest {
     @Test
     void when_put_request_then_book_updated() {
         var bookIsbn = "1231231232";
-        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
+        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90, "Publisher");
         Book createdBook = webTestClient
                 .post()
                 .uri("/books")
@@ -72,7 +72,7 @@ class CatalogServiceApplicationTest {
                 .returnResult().getResponseBody();
         assertThat(createdBook).isNotNull();
         var bookToUpdate = new Book(createdBook.id(), createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95,
-                createdBook.createdDate(), createdBook.lastModifiedDate(), createdBook.version());
+                createdBook.publisher(), createdBook.createdDate(), createdBook.lastModifiedDate(), createdBook.version());
 
         webTestClient
                 .put()
@@ -89,7 +89,7 @@ class CatalogServiceApplicationTest {
     @Test
     void when_delete_request_then_book_deleted() {
         var bookIsbn = "1231231233";
-        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
+        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90, "Publisher");
         webTestClient
                 .post()
                 .uri("/books")
