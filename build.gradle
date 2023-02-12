@@ -21,23 +21,29 @@ repositories {
 ext {
     set('springCloudVersion', "2022.0.1")
     set('testcontainersVersion', "1.17.6")
+    set('testKeycloakVersion', "2.3.0")
 }
 
 dependencies {
-    implementation 'org.springframework.retry:spring-retry'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.cloud:spring-cloud-starter-config'
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
-    runtimeOnly 'org.postgresql:postgresql'
+    runtimeOnly 'io.netty:netty-resolver-dns-native-macos:4.1.79.Final:osx-aarch_64'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.retry:spring-retry'
     implementation 'org.flywaydb:flyway-core'
+
+    runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
-    testImplementation 'org.testcontainers:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+
+    testImplementation 'org.testcontainers:postgresql'
+    testImplementation "com.github.dasniko:testcontainers-keycloak:${testKeycloakVersion}"
 }
 
 dependencyManagement {
@@ -55,6 +61,12 @@ bootBuildImage {
     imageName = "${project.name}"
     environment = ["BP_JVM_VERSION": "17.*"]
 
+    if (System.getProperty( "os.arch" ).toLowerCase().startsWith('aarch')) {
+        // This builder is only for ARM64 systems.
+        // For more info: https://github.com/thomasvitale/paketo-arm64
+        builder = "ghcr.io/thomasvitale/java-builder-arm64"
+    }
+
 //    docker {
 //        publishRegistry {
 //            username = project.findProperty("registryUsername")
@@ -66,4 +78,7 @@ bootBuildImage {
 
 tasks.named('test') {
     useJUnitPlatform()
+    testLogging {
+        events "PASSED", "SKIPPED", "FAILED"
+    }
 }
