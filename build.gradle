@@ -57,23 +57,12 @@ bootRun {
 }
 
 bootBuildImage {
-//    builder = "ghcr.io/thomasvitale/java-builder-arm64"
     imageName = "${project.name}"
     environment = ["BP_JVM_VERSION": "17.*"]
 
     if (System.getProperty( "os.arch" ).toLowerCase().startsWith('aarch')) {
-        // This builder is only for ARM64 systems.
-        // For more info: https://github.com/thomasvitale/paketo-arm64
         builder = "ghcr.io/thomasvitale/java-builder-arm64"
     }
-
-//    docker {
-//        publishRegistry {
-//            username = project.findProperty("registryUsername")
-//            password = project.findProperty("registryToken")
-//            url = project.findProperty("registryUrl")
-//        }
-//    }
 }
 
 tasks.named('test') {

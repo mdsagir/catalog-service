@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.polarbookshop.catalogservice.domain.Book;
 import dasniko.testcontainers.keycloak.KeycloakContainer;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -58,7 +57,6 @@ class CatalogServiceApplicationTest {
 
 
     @Test
-    @Disabled
     void whenGetRequestWithIdThenBookReturned() {
         var bookIsbn = "1231231230";
         var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90, "Polarsophia");
@@ -79,6 +77,7 @@ class CatalogServiceApplicationTest {
                 .expectStatus().is2xxSuccessful()
                 .expectBody(Book.class).value(actualBook -> {
                     assertThat(actualBook).isNotNull();
+                    assertThat(expectedBook).isNotNull();
                     assertThat(actualBook.isbn()).isEqualTo(expectedBook.isbn());
                 });
     }
@@ -113,7 +112,6 @@ class CatalogServiceApplicationTest {
     }
 
     @Test
-    @Disabled
     void whenPostRequestUnauthorizedThen403() {
         var expectedBook = Book.of("1231231231", "Title", "Author", 9.90, "Polarsophia");
 
@@ -139,6 +137,7 @@ class CatalogServiceApplicationTest {
                 .expectStatus().isCreated()
                 .expectBody(Book.class).value(book -> assertThat(book).isNotNull())
                 .returnResult().getResponseBody();
+        assertThat(createdBook).isNotNull();
         var bookToUpdate = new Book(createdBook.id(), createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95,
                 createdBook.publisher(), createdBook.createdDate(), createdBook.lastModifiedDate(),
                 createdBook.version());
@@ -175,16 +174,17 @@ class CatalogServiceApplicationTest {
                 .exchange()
                 .expectStatus().isNoContent();
 
-//        webTestClient
-//                .get()
-//                .uri("/books/" + bookIsbn)
-//                .exchange()
-//                .expectStatus().isNotFound()
-//                .expectBody(String.class).value(errorMessage ->
-//                        assertThat(errorMessage).isEqualTo("The book with ISBN " + bookIsbn + " was not found.")
-//                );
+        webTestClient
+                .get()
+                .uri("/books/" + bookIsbn)
+                .exchange()
+                .expectStatus().isNotFound()
+                .expectBody(String.class).value(errorMessage ->
+                        assertThat(errorMessage).isEqualTo("The book with ISBN " + bookIsbn + " was not found.")
+                );
     }
 
+    @SuppressWarnings("SameParameterValue")
     private static KeycloakToken authenticateWith(String username, String password, WebClient webClient) {
         return webClient
                 .post()
