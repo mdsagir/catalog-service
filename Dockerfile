@@ -32,6 +32,5 @@ COPY --from=build /app/build/libs/*.jar app.jar
 
 # Expose the application port
 EXPOSE 8080
-
 # Set the entrypoint for the container
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
