@@ -1,32 +1,30 @@
 # ---- Build Stage ----
-FROM gradle:7.4-jdk17-alpine AS build
+FROM eclipse-temurin:17-jdk-alpine AS build
 
 WORKDIR /app
 
-# Copy the Gradle wrapper and source code
-COPY gradlew .
-COPY gradle /app/gradle
-COPY src /app/src
-COPY build.gradle /app
-COPY settings.gradle /app
+# Copy the build.gradle and settings.gradle files first to leverage caching
+COPY build.gradle settings.gradle ./
 
-# Make the Gradle wrapper executable
-RUN chmod +x gradlew
+# Download the dependencies
+RUN ./gradlew --no-daemon dependencies
+
+# Copy the source code
+COPY src ./src
 
 # Build the application
-RUN ./gradlew build
+RUN ./gradlew --no-daemon build
 
 # ---- Runtime Stage ----
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:17-jre-alpine AS runtime
 
-# Set working directory
 WORKDIR /app
 
-# Expose the application port (if applicable)
+# Copy the JAR file built from the build stage
+COPY --from=build /app/build/libs/*.jar app.jar
+
+# Expose the application port
 EXPOSE 8080
 
-# Copy the built JAR from the build stage
-COPY --from=build /app/build/libs/*.jar /app/app.jar
-
-# Set the default command to run the application
+# Set the entrypoint for the container
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
