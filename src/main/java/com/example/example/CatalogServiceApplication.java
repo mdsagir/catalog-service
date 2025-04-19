@@ -14,7 +14,6 @@ public class CatalogServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CatalogServiceApplication.class, args);
 	}
-
 	@GetMapping("hello")
 	public Map<String, String> hello() {
 		return Map.of("1", "Book", "2", "CD");
