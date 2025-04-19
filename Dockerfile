@@ -26,7 +26,6 @@ RUN ./gradlew --no-daemon build
 FROM eclipse-temurin:17-jre AS runtime
 
 WORKDIR /app
-
 # Copy the JAR file built from the build stage
 COPY --from=build /app/build/libs/*.jar app.jar
 
