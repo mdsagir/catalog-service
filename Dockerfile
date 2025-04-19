@@ -3,6 +3,13 @@ FROM eclipse-temurin:17-jdk AS build
 
 WORKDIR /app
 
+# Copy gradlew and the gradle wrapper files
+COPY gradlew gradlew
+COPY gradle gradle
+
+# Ensure gradlew is executable
+RUN chmod +x gradlew
+
 # Copy the build.gradle and settings.gradle files first to leverage caching
 COPY build.gradle settings.gradle ./
 
