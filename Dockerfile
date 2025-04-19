@@ -1,5 +1,5 @@
 # ---- Build Stage ----
-FROM eclipse-temurin:17-jdk-alpine AS build
+FROM eclipse-temurin:17-jdk AS build
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ COPY src ./src
 RUN ./gradlew --no-daemon build
 
 # ---- Runtime Stage ----
-FROM eclipse-temurin:17-jre-alpine AS runtime
+FROM eclipse-temurin:17-jre AS runtime
 
 WORKDIR /app
 
