@@ -66,12 +66,18 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: gradle
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
       - name: Build container image
         run: |
           chmod +x gradlew
           ./gradlew bootBuildImage \
             --imageName ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
-            --platform linux/amd64,linux/arm64
+      - name: Build multi-architecture container image
+        run: |
+          docker buildx build --platform linux/amd64,linux/arm64 \
+            -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }} \
+            --push .
       - name: OCI image vulnerability scanning
         uses: anchore/scan-action@v3
         id: scan
